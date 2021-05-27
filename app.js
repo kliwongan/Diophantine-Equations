@@ -8,7 +8,7 @@ const lde = require('./lde.js');
 const app = express();
 
 // change the 
-app.listen(PORT, () => console.log(`listening at ${PORT}`));
+app.listen(process.env.port || PORT); //, () => console.log(`listening at ${PORT}`));
 
 // public is the directory containing html, css and js files
 // static files should still work with this example
